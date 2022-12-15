@@ -3,17 +3,20 @@
 /**
  * print_numbers - function that prints all numbers from 0 to 9
  *
- * Return: returns void
+ * Return: Always 0
  */
 
 void print_numbers(void)
 {
 	int n;
+
+	n = 0;
 	
-	for (n = 48; n < 58; n++)
+	while (n < 10)
 	{
-		_putchar(n);
+		_putchar(n + '0');
+		n++;
 	}
-	_putchar(10);
+	_putchar('\n');
 }
 
