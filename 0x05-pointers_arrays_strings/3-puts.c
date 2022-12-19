@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * _puts - Write a function that prints a string, followed by a new line.
+ * _puts - Write a function that prints a string, followed by a new line, to
+ * stdout.
+ *
  * @str: This is my input string
  */
 
@@ -11,7 +13,7 @@ void _puts(char *str)
 
 	for (game = 0; str[game] != '\0'; game++)
 	{
-		_putchar(str[index]);
+		_putchar(str[game]);
 	}
 	_putchar('\n');
 }
