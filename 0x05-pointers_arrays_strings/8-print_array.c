@@ -3,7 +3,7 @@
 /**
  * print_array - prints n elements of an array of integer.
  * @a: pointer to array.
- * @n: number of array elements.
+ * @b: number of array elements.
  * Return: void.
  */
 
