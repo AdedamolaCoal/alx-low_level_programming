@@ -11,10 +11,10 @@ void print_array(int *a, int *b)
 {
 	int i;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < b; i++)
 	{
 		printf("%d", a[i]);
-		if (i != n - 1)
+		if (i != b - 1)
 		{
 			printf(",");
 			printf(" ");
