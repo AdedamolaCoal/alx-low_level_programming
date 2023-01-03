@@ -20,11 +20,11 @@ char *_strstr(char *haystack, char *needle)
 		while (*haystack != '\0' && *str2 != '\0' && *haystack == *str2)
 		{
 			haystack++;
-			*str2++;
+			str2++;
 		}
-		if (str2 == '\0')
+		if (*str2 == '\0')
 			return (str1);
-		haystack = *str1 + 1;
+		haystack = str1 + 1;
 	}
 	return (0);
 }
