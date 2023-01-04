@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * _lenght - checks the length of a string
+ * _length - checks the length of a string
  * @s: is the string
  * Return: return the leng of the string
  */
 
-int _lenght(char *s)
+int _length(char *s)
 {
 	if (*s == '\0')
 		return (0);
-	return (1 + lenght(s + 1));
+	return (1 + length(s + 1));
 }
 
 /**
@@ -49,6 +49,6 @@ int checkp(int i, int lg, char *s)
 
 int is_palindrome(char *s)
 {
-	return (checkp(0, _lenght(s) - 1, s));
+	return (checkp(0, _length(s) - 1, s));
 }
 

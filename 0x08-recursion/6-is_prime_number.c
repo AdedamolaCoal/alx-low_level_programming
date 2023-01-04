@@ -9,6 +9,8 @@
 
 int helperFunction(int num, int i)
 {
+	int i;
+
 	if (i < num)
 	{
 		if (num % i == 0)
