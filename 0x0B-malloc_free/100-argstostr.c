@@ -10,7 +10,7 @@
 char *argstostr(int ac, char **av)
 {
 	/*declare pointer and variables to be used in loop*/
-	int row, col, len. comp;
+	int row, col, len, comp;
 	char *ptr;
 
 	if (ac == 0 || av == NULL)
