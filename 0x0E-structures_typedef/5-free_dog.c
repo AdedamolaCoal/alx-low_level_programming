@@ -3,6 +3,7 @@
 
 /*
  * free_dog - Frees dog.
+ * @dog_t: The dog.
  * @d: The dog to be freed.
  */
 
