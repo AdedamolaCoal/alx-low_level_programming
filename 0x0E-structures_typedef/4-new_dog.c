@@ -5,10 +5,9 @@ int _strlen(char *str);
 char *_strcopy(char *dest, char *src);
 dog_t *new_dog(char *name, float age, char *owner);
 
-/*
+/**
  * _strlen - Finds the length of a string.
  * @str: The string to be measured.
- *
  * Return: The length of the string.
  */
 
@@ -22,13 +21,12 @@ int _strlen(char *str)
 	return (len);
 }
 
-/*
- * _strcopy - Copies a string pointed to by src, including the
- * terminating null byte, to a buffer pointed to by dest.
- * @dest: The buffer storing the string copy.
- * @src: The source string.
+/**
+ * *_strcopy - Copies a string pointed to by src.
+ * @dest: The buffer storing the string copy
+ * @src: The source string
  *
- * Return: The pointer is dest.
+ * Return: The pointer to dest.
  */
 
 char *_strcopy(char *dest, char *src)
@@ -43,11 +41,11 @@ char *_strcopy(char *dest, char *src)
 	return (dest);
 }
 
-/*
- * new_dog - Creates a new dog.
+/**
+ * *new_dog - Creates a new dog.
  * @name: The name of the dog.
- * @age: The dog's age
- * @owner: The owner of the dog.
+ * @age: The real age of the dog.
+ * @owner: Details of the dog's owner
  *
  * Return: The new struct dog.
  */
