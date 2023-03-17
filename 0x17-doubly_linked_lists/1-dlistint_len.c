@@ -1,19 +1,25 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
-
 /**
- * dlistint_len - functiont that returns amount of nodes in a dlinkedlist
- * @h: header node that points to the list
- * Return: amount of nodes
+ * dlistint_len - function that returns the number of elements in a linked
+ * @h: dlistint_t pointer
+ * Return: length of nodes
  */
 
 size_t dlistint_len(const dlistint_t *h)
 {
-	int nodes = 0;
+	int i;
 
+	if (!h)
+	{
+		return (0);
+	}
 	while (h)
 	{
-		nodes++;
+		i++;
 		h = h->next;
 	}
-	return (nodes);
+	return (i);
 }
