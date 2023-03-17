@@ -1,28 +1,19 @@
 #include "lists.h"
 
 /**
- * sum_dlistint - function that adds all n members of a dblinkedlist
- * @head: ptr to dblinkedlist
- * Return: result
+ * sum_dlistint - Sum of the data (n)
+ * @head: Pointer to the head
+ * Return: The result of the sum
  */
 
 int sum_dlistint(dlistint_t *head)
 {
-	int sum;
+	int add_result = 0;
 
-	sum = 0;
-
-	if (head != NULL)
+	while (head != NULL)
 	{
-		while (head->prev != NULL)
-			head = head->prev;
-
-		while (head != NULL)
-		{
-			sum += head->n;
-			head = head->next;
-		}
+		add_result += head->n;
+		head = head->next;
 	}
-
-	return (sum);
+	return (add_result);
 }

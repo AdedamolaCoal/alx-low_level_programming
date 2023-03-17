@@ -1,38 +1,34 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - function that adds a node at the end of a db lkedlist
- * @head: db pointer to the db linked list
- * @n: db linked list data
- * Return: new_node or end node
+ * add_dnodeint_end - adds node at end
+ * @head: head address of linked list
+ * @n: number of new value for new node
+ * Return: address of new node or NULL
  */
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *h;
-	dlistint_t *new;
+	dlistint_t *tmp, *new;
 
+	tmp = *head;
 	new = malloc(sizeof(dlistint_t));
+
 	if (new == NULL)
 		return (NULL);
-
-	new->n = n;
 	new->next = NULL;
-
-	h = *head;
-
-	if (h != NULL)
+	new->prev = NULL;
+	new->n = n;
+	if ((*head) == NULL)
 	{
-		while (h->next != NULL)
-			h = h->next;
-		h->next = new;
+		*head = new;
+		return (new);
 	}
-	else
+	while (tmp->next)
 	{
-		*heead = new;
+		tmp = tmp->next;
 	}
-
-	new->prev = h;
-
+	new->prev = tmp;
+	tmp->next = new;
 	return (new);
 }
